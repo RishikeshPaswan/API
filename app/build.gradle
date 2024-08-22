@@ -1,0 +1,126 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.app.thefruitsspirit'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.app.thefruitsspirit"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    kapt {
+        correctErrorTypes = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.libraries.places:places:3.3.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // text sizes
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    //Glide
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.1'
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+
+    //circle imageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //CCP
+    implementation 'com.hbb20:ccp:2.6.1'
+
+    //pinView
+    implementation 'com.chaos.view:pinview:1.4.4'
+
+    // kotlin navigation
+    // def nav_version = "2.5.2"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
+    implementation "androidx.navigation:navigation-ui-ktx:2.5.3"
+    implementation 'com.hbb20:ccp:2.5.3'
+    implementation 'com.karumi:dexter:6.2.2'
+
+    // view indicator
+    implementation 'com.github.zhpanvip:viewpagerindicator:1.2.1'
+
+
+    //Hilt
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-compiler:2.44"
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+    //coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    //view model and live data
+    def lifecycle_version_hilt = "2.6.1"
+//    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version_hilt"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version_hilt"
+    // error alerter
+    implementation 'com.github.tapadoo:alerter:7.2.4'
+
+    //Loader
+    implementation 'com.github.emreesen27:Android-Nested-Progress:v1.0.2'
+
+    // GoogleMap
+    implementation 'com.google.android.libraries.places:places:2.6.0'
+
+    //Current Location
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+
+    /* firebase messaging */
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.1.2'
+    /**  google gsm**/
+    implementation 'com.google.gms:google-services:4.3.15'
+    implementation platform('com.google.firebase:firebase-bom:31.5.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    /** google social login**/
+    implementation 'com.google.android.gms:play-services-auth:20.5.0'
+    implementation platform('com.google.firebase:firebase-bom:30.2.0')
+
+}

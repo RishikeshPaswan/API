@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1018875827182",
+    "project_id": "the-fruits-of-spirit",
+    "storage_bucket": "the-fruits-of-spirit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018875827182:android:9ef1baa694127db22d74ff",
+        "android_client_info": {
+          "package_name": "com.app.thefruitsspirit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq4FStRwmupMqxVGfphez7raiVjklurg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
